@@ -1,6 +1,7 @@
 # Proyecto de Calculadora de IMC
- <p align=center><img src=images/unnamed (3).pngwidth="300" ><p>
----
+ <p align=center>
+<img src=images/unnamed (3).png width="300" ></p>
+
 
 ## Índice
  <details>
@@ -24,7 +25,7 @@ Este proyecto está pensado para personas adultas como Cris, que al ser evaluado
 </details>
 
 <details>
-  <summary># Metodología e Instrumental</summary>
+  <summary> Metodología e Instrumental</summary>
   Arduino UNO es una placa basada en el microcontrolador ATmega328P. Tiene 14 pines de entrada/salida digital (de los cuales 6 pueden ser usando con PWM), 6 entradas analógicas, un cristal de 16Mhz, conexión USB, conector jack de alimentación, terminales para conexión ICSP y un botón de reseteo. Tiene toda la electrónica necesaria para que el microcontrolador opere, simplemente hay que conectarlo a la energía por el puerto USB ó con un transformador AC-DC
 	
 Si bien para este proyecto se usó una simulación a través del software Proteus, me pareció importante explicarla.
@@ -46,9 +47,9 @@ Entonces, lo que este proyecto debe hacer es recabar los datos necesarios (que s
   <summary>Gráficos y Tablas</summary>
   
   - Diagrama de flujo
-    <p align=center> <img src=images/Screenshot_397.jpg="400" ><p>
+    <p align=center> <img src=images/Screenshot_397.jpg width="400" ></p>
   - Diagrama de bloques
-    <p align=center> <img src=images/Screenshot_396.jpg="400" ><p>
+    <p align=center> <img src=images/Screenshot_396.jpg width="400" ></p>
 </details>
 
 <details>
