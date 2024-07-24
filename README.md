@@ -1,5 +1,5 @@
 # Proyecto de Calculadora de IMC
- <p align=center><img src=images/unnamed%20(3).pngwidth="300" ><p>
+ <p align=center><img src=images/unnamed (3).pngwidth="300" ><p>
 ---
 
 ## Índice
@@ -46,9 +46,9 @@ Entonces, lo que este proyecto debe hacer es recabar los datos necesarios (que s
   <summary>Gráficos y Tablas</summary>
   
   - Diagrama de flujo
-    <p align=center><img src=images/Screenshot_397.jpg="400" ><p>
+    <p align=center> <img src=images/Screenshot_397.jpg="400" ><p>
   - Diagrama de bloques
-    <p align=center><img src=images/Screenshot_396.jpg="400" ><p>
+    <p align=center> <img src=images/Screenshot_396.jpg="400" ><p>
 </details>
 
 <details>
