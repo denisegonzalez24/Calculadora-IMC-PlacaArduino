@@ -4,30 +4,34 @@
 
 ## Índice
  <details>
-  <summary> Descripción del proyecto</summary>
+  <summary># Descripción del proyecto</summary>
  - Motivación
+	 
 Mi proyecto consta de la creación de una calculadora de IMC (Índice de Masa Corporal) que compare el resultado obtenido en cada ciclo con los valores normales de IMC correspondientes a los valores de OMS (Organización mundial de la Salud) en personas adultas.
-La idea surge cuando en mi trabajo conozco a quien llamaré Cris, paciente con quien pude empatizar demasiado, quien padece un trastorno alimenticio por lo que debe ser pesada todos los días en ayunas y después de comer. En su caso es un proceso muy difícil y traumático cada vez que debe hacerlo, no puede conocer los valores que maneja en su peso por indicación médica. En base a esta idea, se me ocurrió poder plantear un dispositivo que calcule su IMC en base a su peso y altura, pero sin devolver valores, solamente que se maneje con los leds y la pantalla serial.
-	Entonces, podría decir que este proyecto está pensado para personas adultas como Cris, que al ser evaluados por profesionales de salud especializados, podría tomarse valores de su altura y su peso, introducirlos y para poder calcular el IMC, sin darlo a conocer, pero que sí permita que estas personas conozcan si está dentro de valores saludables o no a través de la luz led, verde si lo está, y roja sino lo está. Dejando de lado lo tortuoso que supone para ellos conocer los valores que manejan mientras llevan a cabo un tratamiento clínico en algún establecimiento especializado. 
-	Cabe aclarar que si bien para llevar a cabo esta operación es necesario conocer los valores de peso y altura a través de los sensores conectados a la placa arduino UNO, siguiendo la filosofía de este proyecto estos no deberían ser dados a conocer a quienes están en tratamiento. Aunque podrían ser usados por una persona para simplemente ver si su IMC corresponde a valores saludables o no, conociendo su altura y su peso.
+
+
+La idea surge cuando en mi trabajo conozco a quien llamaré Cris, quien padece un trastorno alimenticio por lo que debe ser pesada todos los días en ayunas y después de comer. En su caso es un proceso muy difícil y traumático cada vez que debe hacerlo, no puede conocer los valores que maneja en su peso por indicación médica. En base a esta idea, se me ocurrió poder plantear un dispositivo que calcule su IMC en base a su peso y altura, pero sin devolver valores, solamente que se maneje con los leds y la pantalla serial.
+
+Este proyecto está pensado para personas adultas como Cris, que al ser evaluados por profesionales de salud especializados, podría calcular el IMC para saber si está dentro de valores saludables o no. Dejando de lado lo tortuoso que supone para ellos conocer los valores que manejan mientras llevan a cabo un tratamiento clínico en algún establecimiento especializado. 
+
 </details>
 
   
   <details>
-  <summary> ¿Qué es el IMC?</summary>
+  <summary> # ¿Qué es el IMC?</summary>
   - El Índice de Masa Corporal (IMC) es una medida que relaciona la masa y la altura de un individuo, utilizada como indicador de la salud. Esta se calcula como Peso / Estatura² = IMC
    
 </details>
 
 <details>
-  <summary>Metodología e Instrumental</summary>
+  <summary># Metodología e Instrumental</summary>
   Arduino UNO es una placa basada en el microcontrolador ATmega328P. Tiene 14 pines de entrada/salida digital (de los cuales 6 pueden ser usando con PWM), 6 entradas analógicas, un cristal de 16Mhz, conexión USB, conector jack de alimentación, terminales para conexión ICSP y un botón de reseteo. Tiene toda la electrónica necesaria para que el microcontrolador opere, simplemente hay que conectarlo a la energía por el puerto USB ó con un transformador AC-DC
-       Si bien para este proyecto se usó una simulación a través del software Proteus, me pareció importante explicarla.
-       ¿Cómo está creado el proyecto?
+	
+Si bien para este proyecto se usó una simulación a través del software Proteus, me pareció importante explicarla.
+       # ¿Cómo está creado el proyecto?
            Lo que se quiso probar al principio fue implementar una calculadora que sea medianamente interactiva con el usuario.
 Al principio opté por usar la pantalla de plasma (lcd), pero más tarde simplemente usé la pantalla serial para lograr esto. 
-
-          Luego de calcular el IMC, otra implementación era la de poder mostrar al usuario un mensaje en donde se le decía que su imc era saludable o que no lo era. Más tarde, opté por llevar esto a cabo también mediante una luz led la cuál considero lo suficientemente gráfica y clara.
+   Luego de calcular el IMC, otra implementación era la de poder mostrar al usuario un mensaje en donde se le decía que su imc era saludable o que no lo era. Más tarde, opté por llevar esto a cabo también mediante una luz led la cuál considero lo suficientemente gráfica y clara.
          También tenia mis dudas sobre preguntar la opcion de sexo biologico sin que esto pueda dejar al margen a ciertas personas que no se sienten comodas en solo 2 clases, pero visto desde un lado médico y científico se tomaron los parámetros que la OMS maneja (y siendo que esta organizacion suele hacer esta distinción) me pareció mas exacto incluir esta variable para la medición que necesito.
 
 
