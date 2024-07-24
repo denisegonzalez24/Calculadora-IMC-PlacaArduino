@@ -3,21 +3,39 @@
 ---
 
 ## Índice
- - Descripción del proyecto
+ <details>
+  <summary> Descripción del proyecto</summary>
  - Motivación
-
+Mi proyecto consta de la creación de una calculadora de IMC (Índice de Masa Corporal) que compare el resultado obtenido en cada ciclo con los valores normales de IMC correspondientes a los valores de OMS (Organización mundial de la Salud) en personas adultas.
+La idea surge cuando en mi trabajo conozco a quien llamaré Cris, paciente con quien pude empatizar demasiado, quien padece un trastorno alimenticio por lo que debe ser pesada todos los días en ayunas y después de comer. En su caso es un proceso muy difícil y traumático cada vez que debe hacerlo, no puede conocer los valores que maneja en su peso por indicación médica. En base a esta idea, se me ocurrió poder plantear un dispositivo que calcule su IMC en base a su peso y altura, pero sin devolver valores, solamente que se maneje con los leds y la pantalla serial.
+	Entonces, podría decir que este proyecto está pensado para personas adultas como Cris, que al ser evaluados por profesionales de salud especializados, podría tomarse valores de su altura y su peso, introducirlos y para poder calcular el IMC, sin darlo a conocer, pero que sí permita que estas personas conozcan si está dentro de valores saludables o no a través de la luz led, verde si lo está, y roja sino lo está. Dejando de lado lo tortuoso que supone para ellos conocer los valores que manejan mientras llevan a cabo un tratamiento clínico en algún establecimiento especializado. 
+	Cabe aclarar que si bien para llevar a cabo esta operación es necesario conocer los valores de peso y altura a través de los sensores conectados a la placa arduino UNO, siguiendo la filosofía de este proyecto estos no deberían ser dados a conocer a quienes están en tratamiento. Aunque podrían ser usados por una persona para simplemente ver si su IMC corresponde a valores saludables o no, conociendo su altura y su peso.
+</details>
 
   
-  - ¿Qué es el IMC?
-  - El Índice de Masa Corporal (IMC) es una medida que relaciona la masa y la altura de un individuo, utilizada como indicador de la salud.
+  <details>
+  <summary> ¿Qué es el IMC?</summary>
+  - El Índice de Masa Corporal (IMC) es una medida que relaciona la masa y la altura de un individuo, utilizada como indicador de la salud. Esta se calcula como Peso / Estatura² = IMC
+   
 </details>
 
 <details>
   <summary>Metodología e Instrumental</summary>
-  
-  - Arduino UNO
-  - Creación del proyecto
-  - Implementación y decisiones de diseño
+  Arduino UNO es una placa basada en el microcontrolador ATmega328P. Tiene 14 pines de entrada/salida digital (de los cuales 6 pueden ser usando con PWM), 6 entradas analógicas, un cristal de 16Mhz, conexión USB, conector jack de alimentación, terminales para conexión ICSP y un botón de reseteo. Tiene toda la electrónica necesaria para que el microcontrolador opere, simplemente hay que conectarlo a la energía por el puerto USB ó con un transformador AC-DC
+       Si bien para este proyecto se usó una simulación a través del software Proteus, me pareció importante explicarla.
+       ¿Cómo está creado el proyecto?
+           Lo que se quiso probar al principio fue implementar una calculadora que sea medianamente interactiva con el usuario.
+Al principio opté por usar la pantalla de plasma (lcd), pero más tarde simplemente usé la pantalla serial para lograr esto. 
+
+          Luego de calcular el IMC, otra implementación era la de poder mostrar al usuario un mensaje en donde se le decía que su imc era saludable o que no lo era. Más tarde, opté por llevar esto a cabo también mediante una luz led la cuál considero lo suficientemente gráfica y clara.
+         También tenia mis dudas sobre preguntar la opcion de sexo biologico sin que esto pueda dejar al margen a ciertas personas que no se sienten comodas en solo 2 clases, pero visto desde un lado médico y científico se tomaron los parámetros que la OMS maneja (y siendo que esta organizacion suele hacer esta distinción) me pareció mas exacto incluir esta variable para la medición que necesito.
+
+
+Nuevamente me encontré con la dificultad de no poder recibir de arduino un número de más de un dígito, por lo que me plantee diferentes maneras de poder resolver este problema. Finalmente,  me planteé la idea de que, en lugar de preguntarle al usuario (lo cual es contrario a la filosofía original del proyecto) la placa Arduino debería recabar la información mediante unos sensores de peso y altura que deberían conectarse a ella. Para esta implementación y simulación, lo que se me ocurrió usar fue una variable fina de peso y altura pero me pareció fundamental hacer esta aclaración, dado que no contaba con estos sensores en la simulación. 
+Entonces, lo que este proyecto debe hacer es recabar los datos necesarios (que se almacenan en sus respectivas variables), en base a ellos se aplica la fórmula que calcula el imc y almacena este resultado. Luego va a  preguntar al usuario por el sexo biologico para poder medir segun los parametros correctos, Este entonces mide segun sea el caso de A (para f) y B (para m), mostrando  la respuesta esperada “saludable” o “no saludable”.
+
+
+
 </details>
 
 <details>
@@ -30,64 +48,22 @@
 <details>
   <summary>Conclusión</summary>
   
-  - Retos y aprendizajes
+   Al realizar este proyecto me encontré con ciertas dificultades a la hora de plantearlo, primeramente al ser mi primera experiencia con arduino y lo que eso implica; pero me pareció muy gratificante el poder aprender nuevas cosas e implementación de diversas tecnologías. El ámbito de la salud me parece por demás interesante, y como poder resolver diferentes problemas con los que me he encontrado en mi ámbito laboral con las herramientas que aprendo dia a dia en esta hermosa carrera.
+
 </details>
 
 <details>
   <summary>Referencias</summary>
   
-  - Enlaces a recursos utilizados
+  ## Referencias
+
+- [Arduino UNO](https://arduino.cl/arduino-uno/#:~:text=La%20placa%20Arduino%20UNO%20es,de%20toda%20la%20familia%20Arduino.)
+- [Índice de Masa Corporal - Wikipedia](https://es.wikipedia.org/wiki/%C3%8Dndice_de_masa_corporal)
+- [Organización Mundial de la Salud - IMC](https://www.who.int/entity/dietphysicalactivity/es/index.html)
+- [Enterat - IMC](https://www.enterat.com/salud/imc-indice-masa-corporal.php)
 </details>
 
----
 
-## Introducción
-
-Mi proyecto consiste en la creación de una calculadora de IMC (Índice de Masa Corporal) que utiliza valores de referencia de la OMS para indicar si el resultado está dentro de los parámetros saludables. Esta herramienta está diseñada para pacientes como Agustina, quienes necesitan monitorear su IMC sin conocer los valores exactos por razones médicas.
-
----
-
-## Marco Teórico
-
-### ¿Qué es el IMC?
-
-
-
----
-
-## Metodología e Instrumental
-
-### Arduino UNO
-
-Arduino UNO es una placa microcontroladora utilizada en este proyecto para recopilar datos de peso y altura a través de sensores y calcular el IMC.
-
-### Creación del proyecto
-
-Inicialmente, el proyecto incluía una pantalla LCD para interactuar con el usuario, pero se simplificó utilizando una pantalla serial y LEDs para mostrar resultados.
-
-### Implementación y decisiones de diseño
-
-Se integraron LEDs para mostrar visualmente si el IMC es saludable o no, siguiendo las directrices de la OMS para diferenciar entre géneros.
-
----
-
-## Gráficos y Tablas
-
-### Diagrama de flujo
-
-(Incluir diagrama de flujo aquí)
-
-### Diagrama de bloques
-
-(Incluir diagrama de bloques aquí)
-
----
-
-## Conclusión
-
-Al desarrollar este proyecto, enfrenté desafíos significativos debido a mi experiencia limitada con Arduino, pero fue una oportunidad gratificante para aprender y aplicar nuevas tecnologías en el contexto de la salud.
-
----
 
 ## Referencias
 
