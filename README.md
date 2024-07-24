@@ -4,7 +4,7 @@
 
 ## Índice
  <details>
-  <summary># Descripción del proyecto</summary>
+  <summary> Descripción del proyecto</summary>
  - Motivación
 	 
 Mi proyecto consta de la creación de una calculadora de IMC (Índice de Masa Corporal) que compare el resultado obtenido en cada ciclo con los valores normales de IMC correspondientes a los valores de OMS (Organización mundial de la Salud) en personas adultas.
@@ -18,7 +18,7 @@ Este proyecto está pensado para personas adultas como Cris, que al ser evaluado
 
   
   <details>
-  <summary> # ¿Qué es el IMC?</summary>
+  <summary>  ¿Qué es el IMC?</summary>
   - El Índice de Masa Corporal (IMC) es una medida que relaciona la masa y la altura de un individuo, utilizada como indicador de la salud. Esta se calcula como Peso / Estatura² = IMC
    
 </details>
@@ -56,16 +56,6 @@ Entonces, lo que este proyecto debe hacer es recabar los datos necesarios (que s
 
 </details>
 
-<details>
-  <summary>Referencias</summary>
-  
-  ## Referencias
-
-- [Arduino UNO](https://arduino.cl/arduino-uno/#:~:text=La%20placa%20Arduino%20UNO%20es,de%20toda%20la%20familia%20Arduino.)
-- [Índice de Masa Corporal - Wikipedia](https://es.wikipedia.org/wiki/%C3%8Dndice_de_masa_corporal)
-- [Organización Mundial de la Salud - IMC](https://www.who.int/entity/dietphysicalactivity/es/index.html)
-- [Enterat - IMC](https://www.enterat.com/salud/imc-indice-masa-corporal.php)
-</details>
 
 
 
