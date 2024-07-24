@@ -29,15 +29,17 @@ Este proyecto está pensado para personas adultas como Cris, que al ser evaluado
   Arduino UNO es una placa basada en el microcontrolador ATmega328P. Tiene 14 pines de entrada/salida digital (de los cuales 6 pueden ser usando con PWM), 6 entradas analógicas, un cristal de 16Mhz, conexión USB, conector jack de alimentación, terminales para conexión ICSP y un botón de reseteo. Tiene toda la electrónica necesaria para que el microcontrolador opere, simplemente hay que conectarlo a la energía por el puerto USB ó con un transformador AC-DC
 	
 Si bien para este proyecto se usó una simulación a través del software Proteus, me pareció importante explicarla.
-       # ¿Cómo está creado el proyecto?
-           Lo que se quiso probar al principio fue implementar una calculadora que sea medianamente interactiva con el usuario.
-Al principio opté por usar la pantalla de plasma (lcd), pero más tarde simplemente usé la pantalla serial para lograr esto. 
+
+# ¿Cómo está creado el proyecto?
+Inicialmente se quiso implementar una calculadora que sea medianamente interactiva con el usuario.
+
+Opté por usar la pantalla de plasma (lcd), pero más tarde simplemente usé la pantalla serial para lograr esto. 
    Luego de calcular el IMC, otra implementación era la de poder mostrar al usuario un mensaje en donde se le decía que su imc era saludable o que no lo era. Más tarde, opté por llevar esto a cabo también mediante una luz led la cuál considero lo suficientemente gráfica y clara.
-         También tenia mis dudas sobre preguntar la opcion de sexo biologico sin que esto pueda dejar al margen a ciertas personas que no se sienten comodas en solo 2 clases, pero visto desde un lado médico y científico se tomaron los parámetros que la OMS maneja (y siendo que esta organizacion suele hacer esta distinción) me pareció mas exacto incluir esta variable para la medición que necesito.
+         También tenia mis dudas sobre preguntar la opcion de sexo biologico sin que esto pueda dejar al margen a quienes no se sienten comodas en solo 2 géneros, pero visto desde un lado médico y científico se tomaron los parámetros que la OMS maneja (y siendo que esta organizacion suele hacer esta distinción) me pareció mas exacto incluir esta variable para la medición que necesito.
 
 
-Nuevamente me encontré con la dificultad de no poder recibir de arduino un número de más de un dígito, por lo que me plantee diferentes maneras de poder resolver este problema. Finalmente,  me planteé la idea de que, en lugar de preguntarle al usuario (lo cual es contrario a la filosofía original del proyecto) la placa Arduino debería recabar la información mediante unos sensores de peso y altura que deberían conectarse a ella. Para esta implementación y simulación, lo que se me ocurrió usar fue una variable fina de peso y altura pero me pareció fundamental hacer esta aclaración, dado que no contaba con estos sensores en la simulación. 
-Entonces, lo que este proyecto debe hacer es recabar los datos necesarios (que se almacenan en sus respectivas variables), en base a ellos se aplica la fórmula que calcula el imc y almacena este resultado. Luego va a  preguntar al usuario por el sexo biologico para poder medir segun los parametros correctos, Este entonces mide segun sea el caso de A (para f) y B (para m), mostrando  la respuesta esperada “saludable” o “no saludable”.
+Nuevamente me encontré con la dificultad de no poder recibir de arduino un número de más de un dígito, por lo que me plantee diferentes maneras de poder resolver este problema. Finalmente,  me planteé la idea de que, en lugar de preguntarle al usuario (lo cual es contrario a la filosofía original del proyecto) la placa Arduino debería recabar la información mediante unos sensores de peso y altura que deberían conectarse a ella. Para esta implementación y simulación, lo que se me ocurrió usar fue una variable fina de peso y altura; pero me pareció fundamental hacer esta aclaración, dado que no contaba con estos sensores para la simulación. 
+Entonces, lo que este proyecto debe hacer es recabar los datos necesarios (que se almacenan en sus respectivas variables), en base a ellos se aplica la fórmula que calcula el imc y almacena este resultado. Luego va a  preguntar al usuario por el sexo biologico para poder medir segun los parametros correctos. Este entonces mide segun sea el caso de A (para f) y B (para m), mostrando  la respuesta esperada “saludable” o “no saludable”.
 
 
 
