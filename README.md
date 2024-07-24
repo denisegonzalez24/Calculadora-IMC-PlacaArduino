@@ -1,6 +1,6 @@
-# Proyecto de Calculadora de IMC
+# <h1 align=center> Proyecto de Calculadora de IMC <h1/>
  <p align=center>
-<img src=images/logo.png width="300" ></p>
+<img src=images/logo.png width="200" ></p>
 
 
 ## Índice
