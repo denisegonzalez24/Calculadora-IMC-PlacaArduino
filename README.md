@@ -3,18 +3,13 @@
 ---
 
 ## Índice
+ - Descripción del proyecto
+ - Motivación
 
-<details>
-  <summary>Introducción</summary>
-  
-  - Descripción del proyecto
-  - Motivación
-</details>
 
-<details>
-  <summary>Marco Teórico</summary>
   
   - ¿Qué es el IMC?
+  - El Índice de Masa Corporal (IMC) es una medida que relaciona la masa y la altura de un individuo, utilizada como indicador de la salud.
 </details>
 
 <details>
@@ -56,7 +51,7 @@ Mi proyecto consiste en la creación de una calculadora de IMC (Índice de Masa 
 
 ### ¿Qué es el IMC?
 
-El Índice de Masa Corporal (IMC) es una medida que relaciona la masa y la altura de un individuo, utilizada como indicador de la salud.
+
 
 ---
 
